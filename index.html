@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geometry</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="add-css.js" type="text/javascript"></script>
+
+    </head>
+
+    <body>
+
+
+        <div id="wrapD3Cube">
+            <div id="D3Cube">
+                <div id="face1"></div>
+                <div id="face2"></div>
+                <div id="face3"></div>
+                <div id="face4"></div>
+                <div id="face5"></div>
+                <div id="face6"></div>
+            </div>
+        </div>
+        <p class="noselect" style="text-align: center;">
+            <a onclick="reset()">Reset</a> <br />
+            <a onclick="minus('x')">Minus X</a>
+            <a onclick="plus('x')">Plus X</a> <br />
+            <a onclick="minus('y')">Minus Y</a>
+            <a onclick="plus('y')">Plus Y</a> <br />
+            <a onclick="minus('z')">Minus Z</a>
+            <a onclick="plus('z')">Plus Z</a> <br />
+            <a onclick="flip('x')">Flip X</a>
+            <a onclick="flip('y')">Flip Y</a>
+            <a onclick="flip('z')">Flip Z</a><br />
+            <a onclick="spin('x')">Spin X</a>
+            <a onclick="spin('y')">Spin Y</a>
+            <a onclick="spin('z')">Spin Z</a>
+        </p>
+    </body>
+
+</html>
+<script>
+    // Set initial orientation values
+    var cubex = -22,
+    cubey = -38,
+    cubez = 0;
+    addCSSRule("#D3Cube", "transform: rotateX("+cubex+"deg) rotateY("+cubey+"deg) rotateZ("+cubez+"deg);");
+    addCSSRule("#D3Cube", "-moz-transform: rotateX("+cubex+"deg) rotateY("+cubey+"deg) rotateZ("+cubez+"deg);");
+    addCSSRule("#D3Cube", "-webkit-transform: rotateX("+cubex+"deg) rotateY("+cubey+"deg) rotateZ("+cubez+"deg);");
+
+    function rotate(variableName, degrees) {
+        window[variableName] = window[variableName] + degrees;
+        // console.log('cubex: '+cubex+'cubey: '+cubey+'cubez: '+cubez)
+        rotateCube(cubex, cubey, cubez);
+    }
+    function rotateCube(degx, degy, degz){
+        segs = "rotateX("+degx+"deg) rotateY("+degy+"deg) rotateZ("+degz+"deg) translateX(0) translateY(0) translateZ(0)";
+        $('#D3Cube').css({"transform":segs});
+    }
+
+
+    function reset(){
+        window['cubex'] = -22;
+        window['cubey'] = -38;
+        window['cubez'] = 0;
+        rotateCube(cubex, cubey, cubez);
+    }
+    function minus(dimension) {
+        // trackOritationY(-1)
+        rotate("cube"+dimension, -90);
+    }
+    function plus(dimension) {
+        // trackOritationY(-1)
+        rotate("cube"+dimension, 90);
+    }
+    function flip(dimension) {
+        rotate("cube"+dimension, -180);
+    }
+
+    function spin(dimension) {
+        rotate("cube"+dimension, -900);
+    }
+    
+
+    // function arraySearch(arr,val) {
+    //     for (var i=0; i<arr.length; i++)
+    //         if (arr[i] === val)                    
+    //             return i;
+    //     return false;
+    // }
+</script>
