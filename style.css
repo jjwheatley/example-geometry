@@ -64,37 +64,37 @@ a:hover {
     transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
     -moz-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
     -webkit-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: #FFF;
+	/* background-color: #FFF; */
 }
 #face2 {
     transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
     -moz-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
     -webkit-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: #FFAF1C;
+	/* background-color: #FFAF1C; */
 }
 #face3 {
     transform: translateX(0px) translateY(0px) translateZ(56px);
     -moz-transform: translateX(0px) translateY(0px) translateZ(56px);
     -webkit-transform: translateX(0px) translateY(0px) translateZ(56px);
-	background-color: #58D568;
+	/* background-color: #58D568; */
 }
 #face4 {
     transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
     -moz-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
     -webkit-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: #ED3030;
+	/* background-color: #ED3030; */
 }
 #face5 {
     transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
     -moz-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
     -webkit-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: #1C5FFE;
+	/* background-color: #1C5FFE; */
 }
 #face6 {
     transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
     -moz-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
     -webkit-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: #F2F215;
+	/* background-color: #F2F215; */
 }
 
 .noselect {
