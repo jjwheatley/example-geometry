@@ -51,7 +51,14 @@
         addCSSRule("#D3Cube", "-moz-transform: rotateX("+cubex+"deg) rotateY("+cubey+"deg) rotateZ("+cubez+"deg);");
         addCSSRule("#D3Cube", "-webkit-transform: rotateX("+cubex+"deg) rotateY("+cubey+"deg) rotateZ("+cubez+"deg);");
 
-        var colours = ['#FFFFFF', '#FFAF1C', '#58D568', '#ED3030', '#1C5FFE', '#F2F215'];
+        var colours = [
+            '#FFFFFF', //white
+            '#1C5FFE', //blue 
+            '#FFAF1C', //orange 
+            '#58D568', //green  
+            '#ED3030', //red
+            '#F2F215'  //yellow
+        ];
         var i;
         for (i = 0; i < colours.length; i++) {
             addCSSRule("#face"+(1+i), "background-color: "+colours[i]+";");
